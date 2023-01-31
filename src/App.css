@@ -1,0 +1,40 @@
+.w-100{
+  width:100% ;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.capsule{
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.capsule .btn{
+width: 33.3%;
+border: none;
+font-size: 2.7rem;
+}
+
+.btn:nth-child(odd){
+background-color: rgb(10, 0, 102);
+color: white;
+}
+.btn:nth-child(odd):hover{
+ background-color: rgb(60, 41, 228);
+ font-weight: 600;
+
+}
+
+.para{
+  font-weight: 700;
+  font-size: 1.5rem;
+
+}
+
+body{
+  background-color: aliceblue;
+}
