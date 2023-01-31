@@ -13,19 +13,19 @@ test('renders learn react link', () => {
   expect(basicCounter).toHaveTextContent('1')
   });
 
-  it('should increase count when plus button is clicked', () => {
-    expect(basicCounter).toHaveValue(1)
+  test('should increase count when plus button is clicked', () => {
+    expect(basicCounter).toHaveTextContent("1")
     userEvent.click(increaseCount)
-    expect(basicCounter).toHaveValue(2)
+    expect(basicCounter).toHaveTextContent("2")
   })
-  it('should decrease count when minus button is clicked', () => {
+  test('should decrease count when minus button is clicked', () => {
     userEvent.click(increaseCount)
-    expect(basicCounter).toHaveValue(2)
+    expect(basicCounter).toHaveTextContent("2")
     userEvent.click(decreaseCount)
-    expect(basicCounter).toHaveValue(1)
+    expect(basicCounter).toHaveTextContent("1")
   })
-  it('should not decrease to less than 1', () => {
-    expect(basicCounter).toHaveValue(1)
+  test('should not decrease to less than 1', () => {
+    expect(basicCounter).toHaveTextContent("1")
     userEvent.click(decreaseCount)
-    expect(basicCounter).toHaveValue(1)
+    expect(basicCounter).toHaveTextContent("1")
   })
